@@ -1,10 +1,9 @@
-import { Button, Stack, TextField, Typography } from "@mui/material";
+import { Typography, Stack, TextField, Button } from "@mui/material";
 
 export default function Home() {
   function generateBlurb(): void {
     throw new Error("Function not implemented.");
   }
-
   return (
     <Stack
       component="main"
@@ -23,14 +22,13 @@ export default function Home() {
         Generate your next Twitter post with ChatGPT
       </Typography>
       <TextField
-       multiline
-       fullWidth
-       minRows={4}
-       sx={{ "& textarea": { boxShadow: "none !important" } }}
-       placeholder="Key words on what you would like your blurb to be about"
-       ></TextField>
-   
-     <Button onClick={generateBlurb}>Generate Blurb</Button>
-   </Stack>
+        multiline
+        fullWidth
+        minRows={4}
+        sx={{ "& textarea": { boxShadow: "none !important" } }}
+        placeholder="Key words on what you would like your blurb to be about"
+      ></TextField>
+      <Button onClick={generateBlurb}>Generate Blurb</Button>
+    </Stack>
   );
 }
